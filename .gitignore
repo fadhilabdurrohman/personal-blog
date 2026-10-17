@@ -1,0 +1,126 @@
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+db.sqlite3-journal
+
+# User-uploaded media
+media/
+!media/.gitkeep
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.env/
+
+# Python build and distribution
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+
+# Python test and coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Type checking and linting
+.mypy_cache/
+.dmypy.json
+.pyre/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat-schedule.*
+
+# SageMath
+*.sage.py
+
+# IDE: PyCharm and IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# IDE: Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# SFTP configuration
+sftp-config.json
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Documentation build
+/site/
+
+# Backup files
+*.bak
+*.tmp
+*~
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and local runtime files
+*.pid
+*.seed
