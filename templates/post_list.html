@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="post-list">
-    
-    <div class="search">
-        <form>
-            <input type="search" name="query" placeholder="Cari...">
-            <button type="submit">Cari</button>
-        </form>
-    </div>
 
-    <div class="tag-filter">
-        <a href="{% url 'blog:post_list' %}">Semua</a>
-        {% for tag in tags %}
-            <a href="?tag={{ tag.name|urlencode }}">{{ tag.name }}</a>
+    <div class="post-nav">
+        <div class="search">
+            <form class="search-form">
+                <input type="search" class="search-bar" name="query" placeholder="Cari...">
+                <button type="submit" class="search-button">Cari</button>
+            </form>
+        </div>
+
+        <div class="tag-filter">
+            <a href="{% url 'blog:post_list' %}">Semua</a>
+            {% for tag in tags %}
+                <a href="?tag={{ tag.name|urlencode }}">{{ tag.name }}</a>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="post-items">
@@ -37,3 +40,4 @@
     </div>
 
 </section>
+{% endblock content %}
