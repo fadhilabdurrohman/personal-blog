@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Blog - Fadhil{% endblock title %}</title>
+</head>
+<body>
+    
+    <header>
+        <div class="header-menu">
+            <a class="brand">Fadhil</a>
+            <nav>
+                <a href="#">Profile</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content%}{% endblock content %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fadhil. Made with my computer :).</p>
+    </footer>
+
+</body>
+</html>
