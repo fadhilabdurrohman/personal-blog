@@ -10,8 +10,14 @@ class Tag(models.Model):
         return self.name
 
 class Post(models.Model):
+    CREATED_BY_CHOICES = [
+        ('author', 'Author'),
+        ('guest', 'Guest'),
+    ]
+
     title = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.CharField(max_length=20, choices=CREATED_BY_CHOICES, default='author')
     content = CKEditor5Field(config_name='default')
     thumbnail = models.ImageField(upload_to='media/img/')
     tag = models.ManyToManyField(Tag, related_name="posts", blank=True)
