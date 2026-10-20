@@ -57,7 +57,7 @@ footer {
 .post-nav {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
 .search-form {
@@ -76,6 +76,39 @@ footer {
 
 .search-button {
     padding: 4px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background-color: #FFFFF8;
+    cursor: pointer;
+}
+
+.tag-filter a {
+    font-size: 0.9rem;
+}
+
+/* Login form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    padding: 2px 4px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+
+.login-button {
+    padding: 2px;
     border: 1px solid #000000;
     border-radius: 2px;
     background-color: #FFFFF8;
