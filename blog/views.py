@@ -22,6 +22,10 @@ def login_user(request):
     if request.method == 'POST' and form.is_valid():
         user = form.get_user()
         login(request, user)
-        return redirect('main:post_list')
+        return redirect('blog:post_list')
 
     return render(request, 'login.html', {'form': form})
+
+def logout_user(request):
+    logout(request)
+    return redirect('blog:post_list')
