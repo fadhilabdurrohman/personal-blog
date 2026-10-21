@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Tag, Post
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, logout
@@ -15,6 +15,11 @@ def show_post(request):
     }
 
     return render(request, 'post_list.html', context)
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+
+    return render(request, 'post.html', {'post': post})
 
 def login_user(request):
     form = AuthenticationForm(request, data=request.POST or None)
