@@ -118,30 +118,28 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
-MEDIA = "/media/"
+MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 CKEDITOR_5_CONFIGS = {
     'default': {
-        'toolbar': {
-            'items': [
-                'heading',
-                '|',
-                'bold',
-                'italic',
-                'underline',
-                'link',
-                '|',
-                'bulletedList',
-                'numberedList',
-                'blockQuote',
-                '|',
-                'imageUpload',
-                'insertTable',
-                'undo',
-                'redo',
-            ],
-        },
+        'toolbar': [
+            'heading',
+            '|',
+            'bold',
+            'italic',
+            'underline',
+            'link',
+            '|',
+            'bulletedList',
+            'numberedList',
+            'blockQuote',
+            '|',
+            'imageUpload',
+            'insertTable',
+            'undo',
+            'redo',
+        ],
     },
 }
 

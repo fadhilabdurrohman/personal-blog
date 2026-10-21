@@ -117,12 +117,27 @@ footer {
     padding-top: 35px;
 }
 
-.back-button {
+.action {
     padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .symbol {
     text-decoration: none;
+}
+
+.post-action {
+    display: flex;
+    gap: 35px;
+}
+
+.post-action a {
+    text-decoration: none;
+}
+
+.post-action a:hover {
+    text-decoration: underline;
 }
 
 /* Login form */
@@ -153,6 +168,84 @@ footer {
     border-radius: 2px;
     background-color: #FFFFF8;
     cursor: pointer;
+}
+
+/* Form */
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-post input {
+    border: 1px solid #000000;
+    border-radius: 2px;
+    padding: 4px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-post select {
+    padding: 4px;
+    max-width: 100px;
+    width: 100%;
+}
+
+.form-post input[type="file"] {
+    border: none;
+}
+
+.save-button {
+    padding: 4px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 50px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+
+.form-back-button {
+    padding-top: 35px;
+}
+
+/* Delete */
+.delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    gap: 35px;
+}
+
+.delete-confirm {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.delete-form {
+    display: flex;
+    gap: 50px
+}
+
+.delete-button {
+    border: none;
+    font-size: 1rem;
+    color: #DC3545;
+    cursor: pointer;
+}
+
+.back {
+    text-decoration: none;
+}
+
+.delete-button:hover, .back:hover {
+    text-decoration: underline;
 }
 
 /* Hover */

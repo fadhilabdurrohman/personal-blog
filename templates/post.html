@@ -22,8 +22,16 @@
         {{ post.content|safe }}
     </div>
 
-    <div class="back-button">
-        <a href="{% url 'blog:post_list' %}" class="symbol"><<</a> Back to <a href="{% url 'blog:post_list' %}">homepage</a>
+    <div class="action">
+        <div class="back-button">
+            <a href="{% url 'blog:post_list' %}" class="symbol"><<</a> Back to <a href="{% url 'blog:post_list' %}">homepage</a>
+        </div>
+        {% if user.is_superuser %}
+            <div class="post-action">
+                <a href="{% url 'blog:update' pk=post.pk %}">Edit</a>
+                <a href="{% url 'blog:delete' pk=post.pk %}">Delete</a>
+            </div>
+        {% endif %}
     </div>
 
 </article>

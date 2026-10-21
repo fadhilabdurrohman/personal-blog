@@ -1,0 +1,17 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Delete</title>
+</head>
+<body>
+
+    <div class="delete">
+        <p class="delete-confirm">Are you sure?</p>
+        <form method="post" class="delete-form">
+            {% csrf_token %}
+            <button type="submit" class="delete-button">Delete</button>
+            <a href="{% url 'blog:post' post.pk %}" class="back">Cancel</a>
+        </form>
+    </div>
+    
+</body>

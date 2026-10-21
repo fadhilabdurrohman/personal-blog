@@ -1,0 +1,25 @@
+{% load static %}
+<head>
+    {{ form.media }}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Create</title>
+</head>
+<body>
+    
+    <form method="post" class="post-form">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-post">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+        <button type="submit" class="save-button button">Save</button>
+    </form>
+
+    <div class="form-back-button">
+        <a href="{% url 'blog:post_list' %}" class="symbol"><<</a> Back to <a href="{% url 'blog:post_list' %}">homepage</a>
+    </div>
+
+</body>
