@@ -11,13 +11,15 @@ from django.shortcuts import render, redirect, get_object_or_404
 def show_post(request):
     posts = Post.objects.all().order_by('-created_at')
     tags = Tag.objects.all()
+    query = request.GET.get('query', '').strip()
+    selected_tag = request.GET.get('tag', '').strip()
 
-    context = {
-        'posts': posts,
-        'tags': tags,
-    }
+    if query:
+        posts = posts.filter(title__icontains=query)
+    if selected_tag:
+        posts = posts.filter(tag__name=selected_tag)
 
-    return render(request, 'post_list.html', context)
+    return render(request, 'post_list.html', {'posts': posts.distinct(), 'tags': tags, 'query': query, 'selected_tag': selected_tag})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)

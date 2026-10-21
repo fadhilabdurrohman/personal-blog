@@ -248,6 +248,11 @@ footer {
     text-decoration: underline;
 }
 
+/* Button */
+.button {
+    cursor: pointer;
+}
+
 /* Hover */
 .button:hover {
     background-color: #EAEADF;
