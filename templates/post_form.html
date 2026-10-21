@@ -19,7 +19,11 @@
     </form>
 
     <div class="form-back-button">
-        <a href="{% url 'blog:post_list' %}" class="symbol"><<</a> Back to <a href="{% url 'blog:post_list' %}">homepage</a>
+        {% if post %}
+            <a href="{% url 'blog:post' post.pk %}" class="symbol"><<</a> Back to <a href="{% url 'blog:post' post.pk %}">homepage</a>
+        {% else %}
+            <a href="{% url 'blog:post_list' %}" class="symbol"><<</a> Back to <a href="{% url 'blog:post_list' %}">homepage</a>
+        {% endif %}
     </div>
 
 </body>
